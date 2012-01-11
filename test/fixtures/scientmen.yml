@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  grade: MyString
+  job_title: MyString
+  rank: MyString
+  start_date: 2012-01-11 20:12:03
+  finish_date: 2012-01-11 20:12:03
+  person_id: 1
+
+two:
+  grade: MyString
+  job_title: MyString
+  rank: MyString
+  start_date: 2012-01-11 20:12:03
+  finish_date: 2012-01-11 20:12:03
+  person_id: 1

@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  aspirant_type: 1
+  start_study_date: 2012-01-11 20:10:21
+  maybe_finish_date: 2012-01-11 20:10:21
+  finish_study_date: 2012-01-11 20:10:21
+  scientman_id: 1
+  study_form: 1
+  protect_status: false
+  protect_data: 2012-01-11 20:10:21
+  payment: false
+  specialiti_id: 1
+  skip: 1
+  rank: MyString
+  start_date: 2012-01-11 20:10:21
+  finish_date: 2012-01-11 20:10:21
+  person_id: 1
+
+two:
+  aspirant_type: 1
+  start_study_date: 2012-01-11 20:10:21
+  maybe_finish_date: 2012-01-11 20:10:21
+  finish_study_date: 2012-01-11 20:10:21
+  scientman_id: 1
+  study_form: 1
+  protect_status: false
+  protect_data: 2012-01-11 20:10:21
+  payment: false
+  specialiti_id: 1
+  skip: 1
+  rank: MyString
+  start_date: 2012-01-11 20:10:21
+  finish_date: 2012-01-11 20:10:21
+  person_id: 1

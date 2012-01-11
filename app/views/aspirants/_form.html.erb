@@ -1,0 +1,77 @@
+<%= form_for(@aspirant) do |f| %>
+  <% if @aspirant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aspirant.errors.count, "error") %> prohibited this aspirant from being saved:</h2>
+
+      <ul>
+      <% @aspirant.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :aspirant_type %><br />
+    <%= f.number_field :aspirant_type %>
+  </div>
+  <div class="field">
+    <%= f.label :start_study_date %><br />
+    <%= f.datetime_select :start_study_date %>
+  </div>
+  <div class="field">
+    <%= f.label :maybe_finish_date %><br />
+    <%= f.datetime_select :maybe_finish_date %>
+  </div>
+  <div class="field">
+    <%= f.label :finish_study_date %><br />
+    <%= f.datetime_select :finish_study_date %>
+  </div>
+  <div class="field">
+    <%= f.label :scientman_id %><br />
+    <%= f.number_field :scientman_id %>
+  </div>
+  <div class="field">
+    <%= f.label :study_form %><br />
+    <%= f.number_field :study_form %>
+  </div>
+  <div class="field">
+    <%= f.label :protect_status %><br />
+    <%= f.check_box :protect_status %>
+  </div>
+  <div class="field">
+    <%= f.label :protect_data %><br />
+    <%= f.datetime_select :protect_data %>
+  </div>
+  <div class="field">
+    <%= f.label :payment %><br />
+    <%= f.check_box :payment %>
+  </div>
+  <div class="field">
+    <%= f.label :specialiti_id %><br />
+    <%= f.number_field :specialiti_id %>
+  </div>
+  <div class="field">
+    <%= f.label :skip %><br />
+    <%= f.number_field :skip %>
+  </div>
+  <div class="field">
+    <%= f.label :rank %><br />
+    <%= f.text_field :rank %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.datetime_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :finish_date %><br />
+    <%= f.datetime_select :finish_date %>
+  </div>
+  <div class="field">
+    <%= f.label :person_id %><br />
+    <%= f.number_field :person_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

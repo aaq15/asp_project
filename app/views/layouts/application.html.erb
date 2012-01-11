@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <li><%= link_to "Люди", people_path %></li>
+  <li><%= link_to "Специальности", specialities_path %></li>
+  <li><%= link_to "Кафедры", chairs_path %></li>
+  <li><%= link_to "Научные руководители", scientmen_path %></li>
+  <li><%= link_to "Аспиранты", aspirants_path %></li>
+  <li><%= link_to "Оценки", marks_path %></li>
+  <li><%= link_to "Предметы", subjects_path %></li>
+<%= yield %>
+
+</body>
+</html>

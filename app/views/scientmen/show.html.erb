@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Grade:</b>
+  <%= @scientman.grade %>
+</p>
+
+<p>
+  <b>Job title:</b>
+  <%= @scientman.job_title %>
+</p>
+
+<p>
+  <b>Rank:</b>
+  <%= @scientman.rank %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @scientman.start_date %>
+</p>
+
+<p>
+  <b>Finish date:</b>
+  <%= @scientman.finish_date %>
+</p>
+
+<p>
+  <b>Person:</b>
+  <%= @scientman.person_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_scientman_path(@scientman) %> |
+<%= link_to 'Back', scientmen_path %>

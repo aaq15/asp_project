@@ -1,0 +1,23 @@
+<h1>Listing specialities</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @specialities.each do |speciality| %>
+  <tr>
+    <td><%= speciality.name %></td>
+    <td><%= link_to 'Show', speciality %></td>
+    <td><%= link_to 'Edit', edit_speciality_path(speciality) %></td>
+    <td><%= link_to 'Destroy', speciality, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Speciality', new_speciality_path %>
