@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= Chair.human_attribute_name(:name) %>:</b>
   <%= @chair.name %>
 </p>
 
 <p>
-  <b>Number:</b>
+  <b><%= Chair.human_attribute_name(:number) %>:</b>
   <%= @chair.number %>
 </p>
 
 
-<%= link_to 'Edit', edit_chair_path(@chair) %> |
-<%= link_to 'Back', chairs_path %>
+<%= link_to 'Изменить', edit_chair_path(@chair) %> |
+<%= link_to 'Назад к списку кафедр', chairs_path %>

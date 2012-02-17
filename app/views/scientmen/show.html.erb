@@ -1,35 +1,34 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Grade:</b>
+  <b><%=Scientman.human_attribute_name(:person_id)%>:</b>
+  <%= @scientman.person_id %>
+</p>
+
+<p>
+  <b><%=Scientman.human_attribute_name(:grade)%>:</b>
   <%= @scientman.grade %>
 </p>
 
 <p>
-  <b>Job title:</b>
+  <b><%=Scientman.human_attribute_name(:job_title)%>:</b>
   <%= @scientman.job_title %>
 </p>
 
 <p>
-  <b>Rank:</b>
+  <b><%=Scientman.human_attribute_name(:rank)%>:</b>
   <%= @scientman.rank %>
 </p>
 
 <p>
-  <b>Start date:</b>
+  <b><%=Scientman.human_attribute_name(:start_date)%>:</b>
   <%= @scientman.start_date %>
 </p>
 
 <p>
-  <b>Finish date:</b>
+  <b><%=Scientman.human_attribute_name(:finish_date)%>:</b>
   <%= @scientman.finish_date %>
 </p>
 
-<p>
-  <b>Person:</b>
-  <%= @scientman.person_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_scientman_path(@scientman) %> |
-<%= link_to 'Back', scientmen_path %>
+<%= link_to 'Редактировать', edit_scientman_path(@scientman) %> |
+<%= link_to 'Назад', scientmen_path %>

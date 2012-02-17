@@ -44,7 +44,7 @@ class SpecialitiesController < ApplicationController
 
     respond_to do |format|
       if @speciality.save
-        format.html { redirect_to @speciality, :notice => 'Speciality was successfully created.' }
+        format.html { redirect_to @speciality, :notice => 'Специальность создана.' }
         format.json { render :json => @speciality, :status => :created, :location => @speciality }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class SpecialitiesController < ApplicationController
 
     respond_to do |format|
       if @speciality.update_attributes(params[:speciality])
-        format.html { redirect_to @speciality, :notice => 'Speciality was successfully updated.' }
+        format.html { redirect_to @speciality, :notice => 'SСпециальность изменена.' }
         format.json { head :ok }
       else
         format.html { render :action => "edit" }

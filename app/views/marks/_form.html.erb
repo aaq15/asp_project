@@ -12,16 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :value %><br />
-    <%= f.number_field :value %>
-  </div>
-  <div class="field">
     <%= f.label :aspirant_id %><br />
-    <%= f.number_field :aspirant_id %>
+    <%= f.select :aspirant_id, Aspirant.all.map{|s| [s.first_name.to_s + " " + s.second_name.to_s + "" + s.last_name.to_s, s.id]} %>
   </div>
   <div class="field">
     <%= f.label :subject_id %><br />
     <%= f.number_field :subject_id %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br />
+    <%= f.select :value, options_for_select(0..5, @mark.value) %>
   </div>
   <div class="actions">
     <%= f.submit %>

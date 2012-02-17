@@ -1,22 +1,22 @@
-<h1>Listing aspirants</h1>
+<h1>Список аспирантов</h1>
 
 <table>
   <tr>
-    <th>Aspirant type</th>
-    <th>Start study date</th>
-    <th>Maybe finish date</th>
-    <th>Finish study date</th>
-    <th>Scientman</th>
-    <th>Study form</th>
-    <th>Protect status</th>
-    <th>Protect data</th>
-    <th>Payment</th>
-    <th>Specialiti</th>
-    <th>Skip</th>
-    <th>Rank</th>
-    <th>Start date</th>
-    <th>Finish date</th>
-    <th>Person</th>
+    <th>Аспирант</th>
+    <th>Тип аспиранта</th>
+    <th>Начало обучения</th>
+    <th>Предположительное окончание обучения</th>
+    <th>Окончание обучения</th>
+    <th>Научный руководитель</th>
+    <th>Форма обучения</th>
+    <th>Статус защиты</th>
+    <th>Дата защиты</th>
+    <th>Оплата текущего семестра</th>
+    <th>Специальность</th>
+    <th>Звание</th>
+    <th>Начало периода</th>
+    <th>Конец периода</th>
+    <th>Всего пропущено</th>
     <th></th>
     <th></th>
     <th></th>
@@ -24,6 +24,7 @@
 
 <% @aspirants.each do |aspirant| %>
   <tr>
+    <td><%= aspirant.person_id %></td>
     <td><%= aspirant.aspirant_type %></td>
     <td><%= aspirant.start_study_date %></td>
     <td><%= aspirant.maybe_finish_date %></td>
@@ -34,18 +35,17 @@
     <td><%= aspirant.protect_data %></td>
     <td><%= aspirant.payment %></td>
     <td><%= aspirant.specialiti_id %></td>
-    <td><%= aspirant.skip %></td>
     <td><%= aspirant.rank %></td>
     <td><%= aspirant.start_date %></td>
     <td><%= aspirant.finish_date %></td>
-    <td><%= aspirant.person_id %></td>
-    <td><%= link_to 'Show', aspirant %></td>
-    <td><%= link_to 'Edit', edit_aspirant_path(aspirant) %></td>
-    <td><%= link_to 'Destroy', aspirant, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= aspirant.skip %></td>
+    <td><%= link_to 'Показать', aspirant %></td>
+    <td><%= link_to 'Изменить', edit_aspirant_path(aspirant) %></td>
+    <td><%= link_to 'Удалить', aspirant, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Aspirant', new_aspirant_path %>
+<%= link_to 'Новый аспирант', new_aspirant_path %>

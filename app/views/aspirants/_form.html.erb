@@ -12,20 +12,24 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :person_id %><br />
+    <%= f.number_field :person_id %>
+  </div>
+  <div class="field">
     <%= f.label :aspirant_type %><br />
     <%= f.number_field :aspirant_type %>
   </div>
   <div class="field">
     <%= f.label :start_study_date %><br />
-    <%= f.datetime_select :start_study_date %>
+    <%= f.date_select :start_study_date %>
   </div>
   <div class="field">
     <%= f.label :maybe_finish_date %><br />
-    <%= f.datetime_select :maybe_finish_date %>
+    <%= f.date_select :maybe_finish_date %>
   </div>
   <div class="field">
     <%= f.label :finish_study_date %><br />
-    <%= f.datetime_select :finish_study_date %>
+    <%= f.date_select :finish_study_date %>
   </div>
   <div class="field">
     <%= f.label :scientman_id %><br />
@@ -41,7 +45,7 @@
   </div>
   <div class="field">
     <%= f.label :protect_data %><br />
-    <%= f.datetime_select :protect_data %>
+    <%= f.date_select :protect_data %>
   </div>
   <div class="field">
     <%= f.label :payment %><br />
@@ -61,15 +65,11 @@
   </div>
   <div class="field">
     <%= f.label :start_date %><br />
-    <%= f.datetime_select :start_date %>
+    <%= f.date_select :start_date %>
   </div>
   <div class="field">
     <%= f.label :finish_date %><br />
-    <%= f.datetime_select :finish_date %>
-  </div>
-  <div class="field">
-    <%= f.label :person_id %><br />
-    <%= f.number_field :person_id %>
+    <%= f.date_select :finish_date %>
   </div>
   <div class="actions">
     <%= f.submit %>

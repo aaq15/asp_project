@@ -1,55 +1,60 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>First name:</b>
-  <%= @person.first_name %>
-</p>
-
-<p>
-  <b>Second name:</b>
+  <b><%=Person.human_attribute_name(:second_name)%>:</b>
   <%= @person.second_name %>
 </p>
 
 <p>
-  <b>Last name:</b>
+  <b><%=Person.human_attribute_name(:first_name)%>:</b>
+  <%= @person.first_name %>
+</p>
+
+<p>
+  <b><%=Person.human_attribute_name(:last_name)%>:</b>
   <%= @person.last_name %>
 </p>
 
 <p>
-  <b>Birthday:</b>
+  <b><%=Person.human_attribute_name(:birthday)%>:</b>
   <%= @person.birthday %>
 </p>
 
 <p>
-  <b>Telephone:</b>
+  <b><%=Person.human_attribute_name(:telephone)%>:</b>
   <%= @person.telephone %>
 </p>
 
 <p>
-  <b>Email:</b>
+  <b><%=Person.human_attribute_name(:email)%>:</b>
   <%= @person.email %>
 </p>
 
 <p>
-  <b>Male:</b>
-  <%= @person.male %>
+  <b><%=Person.human_attribute_name(:male)%>:</b>
+  <%= @person.sex %>
 </p>
 
 <p>
-  <b>Status:</b>
-  <%= @person.status %>
+  <b><%=Person.human_attribute_name(:status)%>:</b>
+  <%= @person.get_status? %>
 </p>
 
+
+<% if @person.scientman? %>
 <p>
-  <b>Scientman:</b>
-  <%= @person.scientman_id %>
+  <b>Научный руководитель:</b>
+  <%= render :partial => "scientman", :locals => {:scientman => @person.scientman} %>
 </p>
+<% end %>
 
+<% if @person.aspirant? %>
 <p>
-  <b>Aspirant:</b>
-  <%= @person.aspirant_id %>
+  <b>Аспирант:</b>
+  <%= render :partial => "aspirant", :locals => {:aspirant => @person.aspirant} %>
 </p>
+<% end %>
 
 
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+<%= link_to 'Изменить', edit_person_path(@person) %> |
+<%= link_to 'Назад', people_path %>

@@ -44,7 +44,7 @@ class SubjectsController < ApplicationController
 
     respond_to do |format|
       if @subject.save
-        format.html { redirect_to @subject, :notice => 'Subject was successfully created.' }
+        format.html { redirect_to @subject, :notice => 'Предмет создан.' }
         format.json { render :json => @subject, :status => :created, :location => @subject }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class SubjectsController < ApplicationController
 
     respond_to do |format|
       if @subject.update_attributes(params[:subject])
-        format.html { redirect_to @subject, :notice => 'Subject was successfully updated.' }
+        format.html { redirect_to @subject, :notice => 'Предмет изменен.' }
         format.json { head :ok }
       else
         format.html { render :action => "edit" }

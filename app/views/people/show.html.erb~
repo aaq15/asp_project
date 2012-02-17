@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @person.first_name %>
+</p>
+
+<p>
+  <b>Second name:</b>
+  <%= @person.second_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @person.last_name %>
+</p>
+
+<p>
+  <b>Birthday:</b>
+  <%= @person.birthday %>
+</p>
+
+<p>
+  <b>Telephone:</b>
+  <%= @person.telephone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @person.email %>
+</p>
+
+<p>
+  <b>Male:</b>
+  <%= @person.male %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @person.status %>
+</p>
+
+<% if @person.aspirant? %>
+<p>
+  <b>Scientman:</b>
+  <% if @person.scientman %>
+    <%= link_to @person.scientman.full_name, show_person_path(@person.scientman) %>
+  <% else %>
+    not selected
+  <% end %>
+</p>
+
+<p>
+  <b>Aspirant:</b>
+  <%= @person.aspirant_id %>
+  <%= render :partial => "aspirant", :locals => {:aspirant => @person.aspirant} %>
+</p>
+<% end %>
+
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>

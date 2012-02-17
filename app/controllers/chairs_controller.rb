@@ -44,7 +44,7 @@ class ChairsController < ApplicationController
 
     respond_to do |format|
       if @chair.save
-        format.html { redirect_to @chair, :notice => 'Chair was successfully created.' }
+        format.html { redirect_to @chair, :notice => 'Кафедра успешно создана.' }
         format.json { render :json => @chair, :status => :created, :location => @chair }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class ChairsController < ApplicationController
 
     respond_to do |format|
       if @chair.update_attributes(params[:chair])
-        format.html { redirect_to @chair, :notice => 'Chair was successfully updated.' }
+        format.html { redirect_to @chair, :notice => 'Кафедра успешно изменена.' }
         format.json { head :ok }
       else
         format.html { render :action => "edit" }

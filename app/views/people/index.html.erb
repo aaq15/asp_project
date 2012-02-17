@@ -15,7 +15,7 @@
     <td><%= link_to person.second_name, person %></td>
     <td><%= link_to person.first_name, person %></td>
     <td><%= link_to person.last_name, person %></td>
-    <td><%= person.get_status? %></td>
+    <td><%= link_to person.get_status? %></td>
     <td><%= link_to 'Редактировать', edit_person_path(person) %></td>
     <td><%= link_to 'Удалить', person, :confirm => 'Вы уверены?', :method => :delete %></td>
   </tr>

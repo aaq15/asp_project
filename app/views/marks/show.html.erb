@@ -1,20 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Value:</b>
+  <b><%=Mark.human_attribute_name(:value)%>:</b>
   <%= @mark.value %>
 </p>
 
 <p>
-  <b>Aspirant:</b>
+  <b><%=Mark.human_attribute_name(:aspirant_id)%>:</b>
   <%= @mark.aspirant_id %>
 </p>
 
 <p>
-  <b>Subject:</b>
+  <b><%=Mark.human_attribute_name(:subject_id)%>:</b>
   <%= @mark.subject_id %>
 </p>
 
 
-<%= link_to 'Edit', edit_mark_path(@mark) %> |
-<%= link_to 'Back', marks_path %>
+<%= link_to 'Изменить', edit_mark_path(@mark) %> |
+<%= link_to 'Назад к оценкам', marks_path %>

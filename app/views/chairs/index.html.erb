@@ -1,9 +1,9 @@
-<h1>Listing chairs</h1>
+<h1>Кафедры</h1>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Number</th>
+    <th>Название</th>
+    <th>Номер</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= chair.name %></td>
     <td><%= chair.number %></td>
-    <td><%= link_to 'Show', chair %></td>
-    <td><%= link_to 'Edit', edit_chair_path(chair) %></td>
-    <td><%= link_to 'Destroy', chair, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Показать', chair %></td>
+    <td><%= link_to 'Изменить', edit_chair_path(chair) %></td>
+    <td><%= link_to 'Удалить', chair, :confirm => 'Вы уверены?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Chair', new_chair_path %>
+<%= link_to 'Добавить кафедру', new_chair_path %>

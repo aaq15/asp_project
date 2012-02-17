@@ -1,80 +1,79 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Aspirant type:</b>
+  <b><%=Aspirant.human_attribute_name(:person_id)%>:</b>
+  <%= @aspirant.person_id %>
+</p>
+
+<p>
+  <b><%=Aspirant.human_attribute_name(:aspirant_type)%>:</b>
   <%= @aspirant.aspirant_type %>
 </p>
 
 <p>
-  <b>Start study date:</b>
+  <b><%=Aspirant.human_attribute_name(:start_study_date)%>:</b>
   <%= @aspirant.start_study_date %>
 </p>
 
 <p>
-  <b>Maybe finish date:</b>
+  <b><%=Aspirant.human_attribute_name(:maybe_finish_date)%>:</b>
   <%= @aspirant.maybe_finish_date %>
 </p>
 
 <p>
-  <b>Finish study date:</b>
+  <b><%=Aspirant.human_attribute_name(:finish_study_date)%>:</b>
   <%= @aspirant.finish_study_date %>
 </p>
 
 <p>
-  <b>Scientman:</b>
+  <b><%=Aspirant.human_attribute_name(:scientman_id)%>:</b>
   <%= @aspirant.scientman_id %>
 </p>
 
 <p>
-  <b>Study form:</b>
+  <b><%=Aspirant.human_attribute_name(:study_form)%>:</b>
   <%= @aspirant.study_form %>
 </p>
 
 <p>
-  <b>Protect status:</b>
+  <b><%=Aspirant.human_attribute_name(:protect_status)%>:</b>
   <%= @aspirant.protect_status %>
 </p>
 
 <p>
-  <b>Protect data:</b>
+  <b><%=Aspirant.human_attribute_name(:protect_data)%>:</b>
   <%= @aspirant.protect_data %>
 </p>
 
 <p>
-  <b>Payment:</b>
+  <b><%=Aspirant.human_attribute_name(:payment)%>:</b>
   <%= @aspirant.payment %>
 </p>
 
 <p>
-  <b>Specialiti:</b>
+  <b><%=Aspirant.human_attribute_name(:specialiti_id)%>:</b>
   <%= @aspirant.specialiti_id %>
 </p>
 
 <p>
-  <b>Skip:</b>
-  <%= @aspirant.skip %>
-</p>
-
-<p>
-  <b>Rank:</b>
+  <b><%=Aspirant.human_attribute_name(:rank)%>:</b>
   <%= @aspirant.rank %>
 </p>
 
 <p>
-  <b>Start date:</b>
+  <b><%=Aspirant.human_attribute_name(:start_date)%>:</b>
   <%= @aspirant.start_date %>
 </p>
 
 <p>
-  <b>Finish date:</b>
+  <b><%=Aspirant.human_attribute_name(:finish_date)%>:</b>
   <%= @aspirant.finish_date %>
 </p>
 
 <p>
-  <b>Person:</b>
-  <%= @aspirant.person_id %>
+  <b><%=Aspirant.human_attribute_name(:skip)%>:</b>
+  <%= @aspirant.skip %>
 </p>
 
-
-<%= link_to 'Edit', edit_aspirant_path(@aspirant) %> |
-<%= link_to 'Back', aspirants_path %>
+<%= link_to 'Изменить', edit_aspirant_path(@aspirant) %> |
+<%= link_to 'Назад к списку аспирантов', aspirants_path %>

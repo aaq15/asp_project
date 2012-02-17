@@ -1,0 +1,6 @@
+<b>Научный руководитель:</b>
+<% if aspirant.scientman %>
+  <%= link_to aspirant.scientman.person.full_name, aspirant.scientman.person %>
+<% else %>
+  not selected
+<% end %>

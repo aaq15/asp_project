@@ -44,7 +44,7 @@ class MarksController < ApplicationController
 
     respond_to do |format|
       if @mark.save
-        format.html { redirect_to @mark, :notice => 'Mark was successfully created.' }
+        format.html { redirect_to @mark, :notice => 'Оценка успешно создана.' }
         format.json { render :json => @mark, :status => :created, :location => @mark }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class MarksController < ApplicationController
 
     respond_to do |format|
       if @mark.update_attributes(params[:mark])
-        format.html { redirect_to @mark, :notice => 'Mark was successfully updated.' }
+        format.html { redirect_to @mark, :notice => 'Оценка успешно изменена' }
         format.json { head :ok }
       else
         format.html { render :action => "edit" }
