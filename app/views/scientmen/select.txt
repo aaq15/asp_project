@@ -1,0 +1,1 @@
+f.select :specialiti_id, Specialiti.all.map{ |s| [s.name, s.id]}

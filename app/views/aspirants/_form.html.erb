@@ -16,8 +16,8 @@
     <%= f.number_field :person_id %>
   </div>
   <div class="field">
-    <%= f.label :aspirant_type %><br />
-    <%= f.number_field :aspirant_type %>
+    <%= f.select :aspirant_type, options_for_select([["Аспирант", 0], ["Докторант", 1], ["Соискатель",2]], @aspirant.aspirant_type) %>
+    <!--<%= f.text_field :aspirant_type %>-->
   </div>
   <div class="field">
     <%= f.label :start_study_date %><br />
@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :finish_study_date %><br />
-    <%= f.date_select :finish_study_date %>
+    <%= f.date_select :finish_study_date, :end_year => Time.now.year+15 %>
   </div>
   <div class="field">
     <%= f.label :scientman_id %><br />
@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :study_form %><br />
-    <%= f.number_field :study_form %>
+    <%= f.select :study_form, options_for_select([["Очная, коммерческая", 0], ["Очная, бюджетная", 1], ["Заочная, коммерческое",2]], @aspirant.study_form) %>
   </div>
   <div class="field">
     <%= f.label :protect_status %><br />
@@ -53,7 +53,7 @@
   </div>
   <div class="field">
     <%= f.label :specialiti_id %><br />
-    <%= f.number_field :specialiti_id %>
+    <%= f.select :specialiti_id, Speciality.all.map{ |s| [s.name, s.id]} %>
   </div>
   <div class="field">
     <%= f.label :skip %><br />

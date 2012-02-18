@@ -1,4 +1,5 @@
 class Person < ActiveRecord::Base
+  default_scope order(:second_name)
   has_one :aspirant
   has_one :scientman
   
@@ -11,6 +12,10 @@ class Person < ActiveRecord::Base
   
   def full_name
     "#{second_name} #{first_name}  #{last_name}"
+  end
+     
+  def FIO
+	first_name+" "+second_name+" "+last_name
   end
   
   def get_status?

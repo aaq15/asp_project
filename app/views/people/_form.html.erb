@@ -48,7 +48,7 @@
     <%= f.label :status %><br />
     <%= f.select :status, options_for_select([["Неопределен", 0], ["Науч. руководитель", 1], ["Аспирант",2]], @person.status) %>
   </div>
-  <!--
+<!--
   <%= fields_for :scientman do |builder| %>
     <%= render "scientman_fields", :f => builder %>
   <% end %>
@@ -56,7 +56,7 @@
     <%= f.label :aspirant_id %><br />
     <%= f.number_field :aspirant_id %>
   </div>
-  -->
+-->
   <div class="actions">
     <%= f.submit "Сохранить" %>
   </div>

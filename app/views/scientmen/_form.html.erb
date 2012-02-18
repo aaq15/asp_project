@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :person_id %><br />
+    <%= f.select :person_id, Person.all.map{ |s| [s.first_name+" "+s.second_name+" "+s.last_name, s.id]} %>
+  </div>
+  <div class="field">
     <%= f.label :grade %><br />
     <%= f.text_field :grade %>
   </div>
@@ -30,10 +34,6 @@
   <div class="field">
     <%= f.label :finish_date %><br />
     <%= f.datetime_select :finish_date %>
-  </div>
-  <div class="field">
-    <%= f.label :person_id %><br />
-    <%= f.number_field :person_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

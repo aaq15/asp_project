@@ -2,9 +2,7 @@
 
 <table>
   <tr>
-    <th>Фамилия</th>
-    <th>Имя</th>
-    <th>Отчество</th>
+    <th>Фамилия Имя Отчество</th>
     <th>Статус</th>
     <th></th>
     <th></th>
@@ -12,9 +10,7 @@
 
 <% @people.each do |person| %>
   <tr>
-    <td><%= link_to person.second_name, person %></td>
-    <td><%= link_to person.first_name, person %></td>
-    <td><%= link_to person.last_name, person %></td>
+    <td><%= link_to person.FIO, person %></td>
     <td><%= link_to person.get_status? %></td>
     <td><%= link_to 'Редактировать', edit_person_path(person) %></td>
     <td><%= link_to 'Удалить', person, :confirm => 'Вы уверены?', :method => :delete %></td>
