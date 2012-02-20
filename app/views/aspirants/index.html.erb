@@ -24,7 +24,7 @@
 
 <% @aspirants.each do |aspirant| %>
   <tr>
-    <td><%= aspirant.person_id %></td>
+    <td><%= aspirant.person.full_name %></td>
     <td><%= aspirant.aspirant_type %></td>
     <td><%= aspirant.start_study_date %></td>
     <td><%= aspirant.maybe_finish_date %></td>

@@ -15,7 +15,7 @@ class Person < ActiveRecord::Base
   end
      
   def FIO
-	first_name+" "+second_name+" "+last_name
+	second_name+" "+first_name+" "+last_name
   end
   
   def get_status?

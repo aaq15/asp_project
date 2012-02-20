@@ -2,10 +2,10 @@
 
 <table>
   <tr>
-    <th>Человек</th>
+    <th>Фамилия Имя Отчество</th>
     <th>Звание</th>
+    <th>Ученая степень</th>
     <th>Должность</th>
-    <th>Тема работы</th>
     <th>Начало работы</th>
     <th>Окончание работы</th>
     <th></th>
@@ -15,15 +15,15 @@
 
 <% @scientmen.each do |scientman| %>
   <tr>
-    <td><%= scientman.person_id %></td>
+    <td><%= scientman.person.full_name %></td>
     <td><%= scientman.grade %></td>
     <td><%= scientman.rank %></td>
     <td><%= scientman.job_title %></td>
     <td><%= scientman.start_date %></td>
     <td><%= scientman.finish_date %></td>
-    <td><%= link_to 'Show', scientman %></td>
-    <td><%= link_to 'Edit', edit_scientman_path(scientman) %></td>
-    <td><%= link_to 'Destroy', scientman, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Показать', scientman %></td>
+    <td><%= link_to 'Редактировать', edit_scientman_path(scientman) %></td>
+    <td><%= link_to 'Удалить', scientman, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

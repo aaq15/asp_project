@@ -352,7 +352,7 @@ ru:
         rank: "Звание"
         start_date: "Начало периода"
         finish_date: "Конец периода"
-        person: "Человек"
+        person_id: "Человек"
    
   support:
     select:

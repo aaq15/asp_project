@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :aspirant_id %><br />
-    <%= f.select :aspirant_id, Aspirant.all.map{|s| [s.first_name.to_s + " " + s.second_name.to_s + "" + s.last_name.to_s, s.id]} %>
+    <%= f.select :aspirant_id, Person.all.map{|s| [s.first_name.to_s + " " + s.second_name.to_s + "" + s.last_name.to_s, s.id]} %>
   </div>
   <div class="field">
     <%= f.label :subject_id %><br />
-    <%= f.number_field :subject_id %>
+    <%= f.select :subject_id, Subject.all.map{|s| [s.name.to_s, s.id]} %>
   </div>
   <div class="field">
     <%= f.label :value %><br />

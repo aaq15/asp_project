@@ -6,4 +6,8 @@ class Mark < ActiveRecord::Base
   validates :aspirant_id,:presence => true,:uniqueness => true
   validates :subject_id,:presence => true,:uniqueness => true
   
+  def FIO
+	@aspirant.second_name+" "+@aspirant.first_name+" "+@aspirant.last_name
+  end
+  
 end

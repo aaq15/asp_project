@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :person_id %><br />
-    <%= f.number_field :person_id %>
+    <%= f.select :person_id, Person.all.map{ |s| [s.first_name+" "+s.second_name+" "+s.last_name, s.id]} %>
   </div>
   <div class="field">
     <%= f.select :aspirant_type, options_for_select([["Аспирант", 0], ["Докторант", 1], ["Соискатель",2]], @aspirant.aspirant_type) %>
@@ -33,8 +33,8 @@
   </div>
   <div class="field">
     <%= f.label :scientman_id %><br />
-    <%= f.number_field :scientman_id %>
-  </div>
+    <%= f.select :person_id, Person.all.map{ |s| [s.first_name+" "+s.second_name+" "+s.last_name, s.id]} %>
+    </div>
   <div class="field">
     <%= f.label :study_form %><br />
     <%= f.select :study_form, options_for_select([["Очная, коммерческая", 0], ["Очная, бюджетная", 1], ["Заочная, коммерческое",2]], @aspirant.study_form) %>

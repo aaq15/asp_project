@@ -12,9 +12,8 @@
 
 <p>
   <b><%=Mark.human_attribute_name(:subject_id)%>:</b>
-  <%= @mark.subject_id %>
+  <%= @mark.subject.name %>
 </p>
-
 
 <%= link_to 'Изменить', edit_mark_path(@mark) %> |
 <%= link_to 'Назад к оценкам', marks_path %>
