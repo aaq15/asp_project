@@ -2,27 +2,27 @@
 
 <p>
   <b><%=Aspirant.human_attribute_name(:person_id)%>:</b>
-  <%= @aspirant.person_id %>
+  <%= @aspirant.person.full_name %>
 </p>
 
 <p>
   <b><%=Aspirant.human_attribute_name(:aspirant_type)%>:</b>
-  <%= @aspirant.aspirant_type %>
+  <%= @aspirant.asptype %>
 </p>
 
 <p>
   <b><%=Aspirant.human_attribute_name(:start_study_date)%>:</b>
-  <%= @aspirant.start_study_date %>
+  <%= @aspirant.start_study_date.strftime("%d.%m.%Y") %>
 </p>
 
 <p>
   <b><%=Aspirant.human_attribute_name(:maybe_finish_date)%>:</b>
-  <%= @aspirant.maybe_finish_date %>
+  <%= @aspirant.maybe_finish_date.strftime("%d.%m.%Y") %>
 </p>
 
 <p>
   <b><%=Aspirant.human_attribute_name(:finish_study_date)%>:</b>
-  <%= @aspirant.finish_study_date %>
+  <%= @aspirant.finish_study_date.strftime("%d.%m.%Y") %>
 </p>
 
 <p>
@@ -42,12 +42,16 @@
 
 <p>
   <b><%=Aspirant.human_attribute_name(:protect_data)%>:</b>
-  <%= @aspirant.protect_data %>
+  <%= @aspirant.protect_data.strftime("%d.%m.%Y") %>
 </p>
 
 <p>
   <b><%=Aspirant.human_attribute_name(:payment)%>:</b>
-  <%= @aspirant.payment %>
+  <% if @aspirant.payment %>
+      <%= "Оплачено" %>
+	<% else %>
+	  <%= "Задолженность" %>
+  <% end %>
 </p>
 
 <p>
@@ -62,12 +66,12 @@
 
 <p>
   <b><%=Aspirant.human_attribute_name(:start_date)%>:</b>
-  <%= @aspirant.start_date %>
+  <%= @aspirant.start_date.strftime("%d.%m.%Y") %>
 </p>
 
 <p>
   <b><%=Aspirant.human_attribute_name(:finish_date)%>:</b>
-  <%= @aspirant.finish_date %>
+  <%= @aspirant.finish_date.strftime("%d.%m.%Y") %>
 </p>
 
 <p>

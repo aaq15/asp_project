@@ -25,19 +25,24 @@
 <% @aspirants.each do |aspirant| %>
   <tr>
     <td><%= aspirant.person.full_name %></td>
-    <td><%= aspirant.aspirant_type %></td>
-    <td><%= aspirant.start_study_date %></td>
-    <td><%= aspirant.maybe_finish_date %></td>
-    <td><%= aspirant.finish_study_date %></td>
+    <td><%= aspirant.asptype %></td>
+    <td><%= aspirant.start_study_date.strftime("%d.%m.%Y") %></td>
+    <td><%= aspirant.maybe_finish_date.strftime("%d.%m.%Y") %></td>
+    <td><%= aspirant.finish_study_date.strftime("%d.%m.%Y") %></td>
     <td><%= aspirant.scientman_id %></td>
     <td><%= aspirant.study_form %></td>
     <td><%= aspirant.protect_status %></td>
-    <td><%= aspirant.protect_data %></td>
-    <td><%= aspirant.payment %></td>
+    <td><%= aspirant.protect_data.strftime("%d.%m.%Y") %></td>
+    <td><% if aspirant.payment %>
+			<%= "Оплачено" %>
+			<% else %>
+			<%= "Задолженность" %>
+		<% end %>
+    <!--<%= aspirant.payment %>--></td>
     <td><%= aspirant.specialiti_id %></td>
     <td><%= aspirant.rank %></td>
-    <td><%= aspirant.start_date %></td>
-    <td><%= aspirant.finish_date %></td>
+    <td><%= aspirant.start_date.strftime("%d.%m.%Y") %></td>
+    <td><%= aspirant.finish_date.strftime("%d.%m.%Y") %></td>
     <td><%= aspirant.skip %></td>
     <td><%= link_to 'Показать', aspirant %></td>
     <td><%= link_to 'Изменить', edit_aspirant_path(aspirant) %></td>

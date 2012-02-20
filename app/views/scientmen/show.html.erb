@@ -22,12 +22,12 @@
 
 <p>
   <b><%=Scientman.human_attribute_name(:start_date)%>:</b>
-  <%= @scientman.start_date %>
+  <%= @scientman.start_date.strftime("%d.%m.%Y") %>
 </p>
 
 <p>
   <b><%=Scientman.human_attribute_name(:finish_date)%>:</b>
-  <%= @scientman.finish_date %>
+  <%= @scientman.finish_date.strftime("%d.%m.%Y") %>
 </p>
 
 <%= link_to 'Редактировать', edit_scientman_path(@scientman) %> |

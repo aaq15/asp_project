@@ -19,8 +19,8 @@
     <td><%= scientman.grade %></td>
     <td><%= scientman.rank %></td>
     <td><%= scientman.job_title %></td>
-    <td><%= scientman.start_date %></td>
-    <td><%= scientman.finish_date %></td>
+    <td><%= scientman.start_date.strftime("%d.%m.%Y") %></td>
+    <td><%= scientman.finish_date.strftime("%d.%m.%Y") %></td>
     <td><%= link_to 'Показать', scientman %></td>
     <td><%= link_to 'Редактировать', edit_scientman_path(scientman) %></td>
     <td><%= link_to 'Удалить', scientman, :confirm => 'Are you sure?', :method => :delete %></td>
