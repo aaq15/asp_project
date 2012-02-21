@@ -11,13 +11,14 @@ class Aspirant < ActiveRecord::Base
   #validates :scientman_id,:presence => true,:uniqueness => true
   
   Type_asp=["Аспирант","Докторант","Соискатель"]
-  study_form=[]
+  Forma=["Очная, коммерческая","Очная, бюджетная","Заочная, коммерческое"]
   
   def asptype
 	Type_asp[aspirant_type]
   end
   
   def studyform
+    Forma[study_form]
   end
     
 end

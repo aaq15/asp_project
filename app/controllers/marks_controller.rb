@@ -3,6 +3,7 @@ class MarksController < ApplicationController
   # GET /marks.json
   def index
     @marks = Mark.all
+    #@persons = Person.includes(:aspirants => [:marks]).all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +15,7 @@ class MarksController < ApplicationController
   # GET /marks/1.json
   def show
     @mark = Mark.find(params[:id])
+    #@persons = Person.includes(:aspirants => [:marks]).all
 
     respond_to do |format|
       format.html # show.html.erb

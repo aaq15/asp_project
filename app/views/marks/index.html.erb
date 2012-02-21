@@ -13,8 +13,8 @@
 <% @marks.each do |mark| %>
   <tr>
     <td><%= mark.value %></td>
-    <td><%= mark.aspirant_id %></td>
-    <td><%= mark.subject_id %></td>
+    <td><%= mark.aspirant.person.full_name %></td>
+    <td><%= mark.subject.name %></td>
     <td><%= link_to 'Показать', mark %></td>
     <td><%= link_to 'Изменить', edit_mark_path(mark) %></td>
     <td><%= link_to 'Удалить', mark, :confirm => 'Вы уверены?', :method => :delete %></td>
