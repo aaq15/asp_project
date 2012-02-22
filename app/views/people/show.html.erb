@@ -40,7 +40,7 @@
   <%= @person.get_status? %>
 </p>
 
-
+<!--
 <% if @person.scientman? %>
 <p>
   <b>Научный руководитель:</b>
@@ -54,7 +54,7 @@
   <%= render :partial => "aspirant", :locals => {:aspirant => @person.aspirant} %>
 </p>
 <% end %>
-
+-->
 
 <%= link_to 'Изменить', edit_person_path(@person) %> |
 <%= link_to 'Назад', people_path %>
