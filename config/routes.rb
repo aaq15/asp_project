@@ -1,4 +1,6 @@
 Project::Application.routes.draw do
+  resources :skippings
+
   resources :people
 
   resources :specialities

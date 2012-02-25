@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  aspirant_id: 1
+  start: 2012-02-25
+  finish: 2012-02-25
+
+two:
+  aspirant_id: 1
+  start: 2012-02-25
+  finish: 2012-02-25

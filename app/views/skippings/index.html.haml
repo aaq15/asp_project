@@ -1,0 +1,23 @@
+%h1 Listing skippings
+
+%table
+  %tr
+    %th Aspirant
+    %th Start
+    %th Finish
+    %th
+    %th
+    %th
+
+  - @skippings.each do |skipping|
+    %tr
+      %td= skipping.aspirant_id
+      %td= skipping.start
+      %td= skipping.finish
+      %td= link_to 'Show', skipping
+      %td= link_to 'Edit', edit_skipping_path(skipping)
+      %td= link_to 'Destroy', skipping, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Skipping', new_skipping_path

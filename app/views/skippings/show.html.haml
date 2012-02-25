@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Aspirant:
+  = @skipping.aspirant_id
+%p
+  %b Start:
+  = @skipping.start
+%p
+  %b Finish:
+  = @skipping.finish
+
+= link_to 'Edit', edit_skipping_path(@skipping)
+\|
+= link_to 'Back', skippings_path
