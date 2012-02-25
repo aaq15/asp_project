@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Название</th>
+    <th>Код специальности</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,6 +12,7 @@
 <% @specialities.each do |speciality| %>
   <tr>
     <td><%= speciality.name %></td>
+    <td><%= speciality.key_specialiti %></td>
     <td><%= link_to 'Показать', speciality %></td>
     <td><%= link_to 'Изменить', edit_speciality_path(speciality) %></td>
     <td><%= link_to 'Удалить', speciality, :confirm => 'Are you sure?', :method => :delete %></td>

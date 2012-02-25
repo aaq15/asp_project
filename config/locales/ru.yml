@@ -325,12 +325,16 @@ ru:
       specialiti:
         listing_specialities: "Список специальностей"
         name: "Название"
+        key_specialiti: "Код специальности"
       speciality:
         name: "Название"
+        key_specialiti: "Код специальности"
       mark:
         value: "Оценка"
         aspirant_id: "Аспирант"
         subject_id: "Предмет"
+        value_type: "Тип оценки"
+        day_exam: "День сдачи"
       person:
         first_name: "Имя"
         second_name: "Фамилия"
