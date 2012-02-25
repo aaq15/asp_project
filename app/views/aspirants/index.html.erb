@@ -13,7 +13,6 @@
     <th>Дата защиты</th>
     <th>Оплата текущего семестра</th>
     <th>Специальность</th>
-    <th>Звание</th>
     <th>Начало периода</th>
     <th>Конец периода</th>
     <th>Всего пропущено</th>
@@ -29,7 +28,7 @@
     <td><%= aspirant.start_study_date.strftime("%d.%m.%Y") %></td>
     <td><%= aspirant.maybe_finish_date.strftime("%d.%m.%Y") %></td>
     <td><%= aspirant.finish_study_date.strftime("%d.%m.%Y") %></td>
-    <td><%= aspirant.scientman_id %></td>
+    <td><%= aspirant.scientman.FIO %></td>
     <td><%= aspirant.studyform %></td>
     <td><%= aspirant.protect_status %></td>
     <td><%= aspirant.protect_data.strftime("%d.%m.%Y") %></td>
@@ -40,7 +39,6 @@
 		<% end %>
     <!--<%= aspirant.payment %>--></td>
     <td><%= aspirant.specialiti_id %></td>
-    <td><%= aspirant.rank %></td>
     <td><%= aspirant.start_date.strftime("%d.%m.%Y") %></td>
     <td><%= aspirant.finish_date.strftime("%d.%m.%Y") %></td>
     <td><%= aspirant.skip %></td>

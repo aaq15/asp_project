@@ -16,8 +16,8 @@
     <%= f.select :person_id, Person.where(:status => 2).map{ |s| [s.full_name, s.id]} %>
   </div>
   <div class="field">
+    <%= f.label :aspirant_type %><br />
     <%= f.select :aspirant_type, options_for_select([["Аспирант", 0], ["Докторант", 1], ["Соискатель",2]], @aspirant.aspirant_type) %>
-    <!--<%= f.text_field :aspirant_type %>-->
   </div>
   <div class="field">
     <%= f.label :start_study_date %><br />
@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :scientman_id %><br />
-    <%= f.select :person_id, Person.all.map{ |s| [s.first_name+" "+s.second_name+" "+s.last_name, s.id]} %>
+    <%= f.select :scientman_id, Scientman.all.map{ |s| [s.person.full_name, s.id]} %>
     </div>
   <div class="field">
     <%= f.label :study_form %><br />

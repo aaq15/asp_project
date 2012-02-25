@@ -17,10 +17,10 @@ h1, h2, h3, h4, h5, h6, address, blockquote, dl, fieldset, ol, p, table, ul {mar
 #content h3 {font-size:140%;}
 #content h4 {font-size:120%;}
 #content h5, h6 {font-size:100%;}
-#content table {margin:0; border-collapse:collapse;}
+#content table {margin:0; border-collapse:collapse; border:3px}
 #content table.width100 {width:100%;}
-#content table th, #content table td {padding:5px 5px;}
-#content table th {text-align:left; vertical-align:middle; font-weight:bold;}
+#content table th, #content table td {padding:5px 5px; border:3px}
+#content table th {text-align:left; vertical-align:middle; font-weight:bold; border:3px}
 #content ul {margin:15px 0; list-style:none;}
 #content ul li {padding-left:15px; background:url("/images/ul.gif") 0 4px no-repeat;}
 #content ul ul {margin:0 0 0 10px;}
@@ -35,12 +35,13 @@ h1, h2, h3, h4, h5, h6, address, blockquote, dl, fieldset, ol, p, table, ul {mar
 #content legend {font-size:120%; font-weight:bold;}
 #content code {font-family:"",monospace;}
 #content .help {cursor:help;}
+#content
 
 /* =============================================================================
 HTML - without styles
 ============================================================================= */
 
-table.nostyle, table.nostyle th, table.nostyle td {border:0 !important;}
+table.nostyle, table.nostyle th, table.nostyle td {border:3 !important;}
 table.nostyle th {background:none !important; text-align:left !important;}
 table.nostyle th, table.nostyle td {padding:3px 5px !important;}
 ul.nostyle {margin:15px 0 15px 20px !important; list-style-type:square !important;}
@@ -60,16 +61,20 @@ LAYOUT
 #tray #logout,#tray #login {padding-left:18px; background:url("/images/tray-logout.gif") 0 50% no-repeat; text-transform:uppercase;}
 #tray #switcher {margin-right:15px;}
 #tray #switcher img {display:block; float:left; width:16px; height:16px; border:0;}
-#menu {padding:15px 15px 13px 15px; background:url("/images/menu.gif") 0 0 repeat-x;}
+#menu {padding:15px 15px 13px 15px; background:url("/images/menu.gif") 0 0 repeat-x;}*
 #menu ul {margin:0; padding:0; list-style-type:none;}
 #menu ul li {display:inline; margin:0; padding:0;}
 #menu ul li a {float:left; margin-right:5px; padding-left:5px; background:url("/images/menu-left.gif") 0 0 no-repeat; text-decoration:none; cursor:pointer;}
 #menu ul li a span {float:left; display:block; padding:7px 15px 9px 8px; background:url("/images/menu-right.gif") 100% 0 no-repeat;}
+/*
 #menu ul li a:hover, #menu ul li#menu-active a {background:url("/images/menu-left.gif") 0 -35px no-repeat;}
 #menu ul li a:hover span, #menu ul li#menu-active a span {background:url("/images/menu-right.gif") 100% -35px no-repeat;}
+*/
 #menu ul li#menu-active a {font-weight:bold;}
 #content {padding:20px; overflow:hidden;}
+/*
 #footer {clear:both; padding:15px; background:url("/images/separator.gif") 0 0 repeat-x; font:85%/1.2 "tahoma",sans-serif;}
+*/
 #footer p {margin:0;}
 
 /* =============================================================================

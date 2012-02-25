@@ -27,7 +27,7 @@
 
 <p>
   <b><%=Aspirant.human_attribute_name(:scientman_id)%>:</b>
-  <%= @aspirant.scientman_id %>
+  <%= @aspirant.scientman.person.full_name %>
 </p>
 
 <p>
@@ -57,11 +57,6 @@
 <p>
   <b><%=Aspirant.human_attribute_name(:specialiti_id)%>:</b>
   <%= @aspirant.specialiti_id %>
-</p>
-
-<p>
-  <b><%=Aspirant.human_attribute_name(:rank)%>:</b>
-  <%= @aspirant.rank %>
 </p>
 
 <p>

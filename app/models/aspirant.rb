@@ -1,6 +1,6 @@
 class Aspirant < ActiveRecord::Base
   belongs_to :person
-  has_one :scientman
+  belongs_to :scientman
   belongs_to :speciality
   has_many :marks
   

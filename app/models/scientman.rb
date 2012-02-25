@@ -4,7 +4,7 @@ class Scientman < ActiveRecord::Base
   has_many :aspirants
   
   def FIO
-	second_name+" "+first_name+" "+last_name
+	person.full_name
   end
   
 end
