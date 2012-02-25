@@ -74,5 +74,29 @@
   <%= @aspirant.skip %>
 </p>
 
+<table>
+	<thead>
+		<tr><th colspan="2">Вступительный экзамен</th>
+		<tr><th>Предмет</th><th>Оценка</th>
+		
+	</thead>
+	<tbody>
+		<% @aspirant.marks.where(:value_type => 1).each do |mark| %>
+		<tr><td><%= mark.subject.name %></td><td><%= mark.value %></td>
+		<% end %>
+	</tbody>
+</table>
+<table>
+	<thead>
+		<tr><th colspan="2">Кандидатский минимум</th>
+		<tr><th>Предмет</th><th>Оценка</th>
+	</thead>
+	<tbody>
+		<% @aspirant.marks.where(:value_type => 2).each do |mark| %>
+		<tr><td><%= mark.subject.name %></td><td><%= mark.value %></td>
+		<% end %>
+	</tbody>
+</table>
+
 <%= link_to 'Изменить', edit_aspirant_path(@aspirant) %> |
 <%= link_to 'Назад к списку аспирантов', aspirants_path %>

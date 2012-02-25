@@ -4,6 +4,10 @@
   <b><%=Speciality.human_attribute_name(:name)%>:</b>
   <%= @speciality.name %>
 </p>
+<p>
+  <b><%=Speciality.human_attribute_name(:key_specialiti)%>:</b>
+  <%= @speciality.key_specialiti %>
+</p>
 
 
 <%= link_to 'Редактировать', edit_speciality_path(@speciality) %> |

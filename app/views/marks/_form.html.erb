@@ -23,6 +23,14 @@
     <%= f.label :value %><br />
     <%= f.select :value, options_for_select(0..5, @mark.value) %>
   </div>
+  <div class="field">
+	<%= f.label :value_type %>
+	<%= f.select :value_type, [["Вступительный экзамен", 1],["Кандидатский минимум",2]] %>
+  </div>
+  <div class="field">
+	<%= f.label :day_exam %>
+	<%= f.date_select :day_exam %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

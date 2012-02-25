@@ -3,8 +3,10 @@
 <table>
   <tr>
     <th>Оценка</th>
+    <th>Тип экзамена</th>
     <th>Аспирант</th>
     <th>Предмет</th>
+    <th>День сдачи</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,8 +15,10 @@
 <% @marks.each do |mark| %>
   <tr>
     <td><%= mark.value %></td>
+    <td><%= mark.vt %></td>
     <td><%= mark.aspirant.person.full_name %></td>
     <td><%= mark.subject.name %></td>
+    <td><%= mark.day_exam.strftime("%d.%m.%Y") %></td>
     <td><%= link_to 'Показать', mark %></td>
     <td><%= link_to 'Изменить', edit_mark_path(mark) %></td>
     <td><%= link_to 'Удалить', mark, :confirm => 'Вы уверены?', :method => :delete %></td>

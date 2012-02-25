@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <b><%=Mark.human_attribute_name(:value_type)%>:</b>
+  <%= @mark.value_type %>
+</p>
+
+<p>
   <b><%=Mark.human_attribute_name(:aspirant_id)%>:</b>
   <%= @mark.aspirant.person.full_name %>
 </p>
@@ -13,6 +18,11 @@
 <p>
   <b><%=Mark.human_attribute_name(:subject_id)%>:</b>
   <%= @mark.subject.name %>
+</p>
+
+<p>
+  <b><%=Mark.human_attribute_name(:day_exam)%>:</b>
+  <%= @mark.day_exam %>
 </p>
 
 <%= link_to 'Изменить', edit_mark_path(@mark) %> |
