@@ -52,21 +52,17 @@
     <%= f.check_box :payment %>
   </div>
   <div class="field">
-    <%= f.label :specialiti_id %><br />
-    <%= f.select :specialiti_id, Speciality.all.map{ |s| [s.name, s.id]} %>
+    <%= f.label :speciality_id %><br />
+    <%= f.select :speciality_id, Speciality.all.map{ |s| [s.name, s.id]} %>
   </div>
   <div class="field">
     <%= f.label :skip %><br />
     <%= f.number_field :skip %>
   </div>
-  <div class="field">
-    <%= f.label :start_date %><br />
-    <%= f.date_select :start_date %>
-  </div>
-  <div class="field">
-    <%= f.label :finish_date %><br />
-    <%= f.date_select :finish_date %>
-  </div>
+  <p><%= link_to_add_fields "Добавить пропуск", f, :skippings %></p>
+  <%= f.fields_for :skippings do |builder| %>
+    <%= render "skipping_fields", :f => builder %>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

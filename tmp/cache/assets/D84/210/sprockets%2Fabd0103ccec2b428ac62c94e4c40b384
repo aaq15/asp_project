@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@value{	"_version"%608442002f17ed88000dad188f09e283"digest"%f436d209b02f5f9ee38534aefc22d6ff"lengthi´9"source"´9/*!
+o: ActiveSupport::Cache::Entry	:@value{	"_version"%64ebbf6fdf9580471ebf54eccbd872f3"digest"%988aa926d7ca4648c99de614ae2c2235"lengthi;"source";/*!
  * jQuery JavaScript Library v1.6.4
  * http://jquery.com/
  *
@@ -10153,11 +10153,26 @@ $.TokenList.Cache = function (options) {
 (function() {
 
 }).call(this);
+(function() {
+
+}).call(this);
 // This is a manifest file that'll be compiled into including all the files listed below.
 // Add new JavaScript/Coffee code in separate files in this directory and they'll automatically
 // be included in the compiled file accessible from http://example.com/assets/application.js
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
+
+function remove_fields(link) {
+  $(link).prev("input[type=hidden]").val("1");
+  $(link).closest(".fields").hide();
+}
+
+function add_fields(link, association, content) {
+  var new_id = new Date().getTime();
+  var regexp = new RegExp("new_" + association, "g")
+  $(link).parent().before(content.replace(regexp, new_id));
+}
+
 ;
-:@expires_in0:@compressedF:@created_atf1330151182.0024951 (á
+:@expires_in0:@compressedF:@created_atf1330166997.011636 ¾¥

@@ -11,6 +11,13 @@ class Aspirant < ActiveRecord::Base
   
   #validates :scientman_id,:presence => true,:uniqueness => true
   
+  accepts_nested_attributes_for :skippings, :allow_destroy => true
+  
+  before_save { 
+    self.skip = skippings.inject(0) { |total, s| total + (s.finish - s.start) }
+    self.maybe_finish_date = self.start_study_date + 3.years + self.skip.days
+  }
+  
   Type_asp=["Аспирант","Докторант","Соискатель"]
   Forma=["Очная, коммерческая","Очная, бюджетная","Заочная, коммерческое"]
   

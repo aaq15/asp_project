@@ -56,22 +56,16 @@
 
 <p>
   <b><%=Aspirant.human_attribute_name(:specialiti_id)%>:</b>
-  <%= @aspirant.specialiti_id %>
-</p>
-
-<p>
-  <b><%=Aspirant.human_attribute_name(:start_date)%>:</b>
-  <%= @aspirant.start_date.strftime("%d.%m.%Y") %>
-</p>
-
-<p>
-  <b><%=Aspirant.human_attribute_name(:finish_date)%>:</b>
-  <%= @aspirant.finish_date.strftime("%d.%m.%Y") %>
+  <%= @aspirant.speciality.name %>
 </p>
 
 <p>
   <b><%=Aspirant.human_attribute_name(:skip)%>:</b>
-  <%= @aspirant.skip %>
+  <%= @aspirant.skip %> дней
+  <br>
+  <% @aspirant.skippings.each do |s| %>
+    <%= s.start %> -- <%= s.finish %> <br>
+  <% end %>
 </p>
 
 <table>

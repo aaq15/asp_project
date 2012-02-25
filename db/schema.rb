@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120225090704) do
+ActiveRecord::Schema.define(:version => 20120225103529) do
 
   create_table "aspirants", :force => true do |t|
     t.integer  "aspirant_type"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20120225090704) do
     t.boolean  "protect_status"
     t.datetime "protect_data"
     t.boolean  "payment"
-    t.integer  "specialiti_id"
+    t.integer  "speciality_id"
     t.integer  "skip"
     t.datetime "start_date"
     t.datetime "finish_date"
@@ -70,6 +70,14 @@ ActiveRecord::Schema.define(:version => 20120225090704) do
     t.datetime "start_date"
     t.datetime "finish_date"
     t.integer  "person_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "skippings", :force => true do |t|
+    t.integer  "aspirant_id"
+    t.date     "start"
+    t.date     "finish"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

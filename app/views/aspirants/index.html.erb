@@ -23,7 +23,7 @@
 
 <% @aspirants.each do |aspirant| %>
   <tr>
-    <td><%= aspirant.person.full_name %></td>
+    <td><%= link_to aspirant.person.full_name, aspirant %></td>
     <td><%= aspirant.asptype %></td>
     <td><%= aspirant.start_study_date.strftime("%d.%m.%Y") %></td>
     <td><%= aspirant.maybe_finish_date.strftime("%d.%m.%Y") %></td>
@@ -37,12 +37,10 @@
 			<% else %>
 			<%= "Задолженность" %>
 		<% end %>
-    <!--<%= aspirant.payment %>--></td>
-    <td><%= aspirant.specialiti_id %></td>
+    <td><%= aspirant.speciality.name %></td>
     <td><%= aspirant.start_date.strftime("%d.%m.%Y") %></td>
     <td><%= aspirant.finish_date.strftime("%d.%m.%Y") %></td>
     <td><%= aspirant.skip %></td>
-    <td><%= link_to 'Показать', aspirant %></td>
     <td><%= link_to 'Изменить', edit_aspirant_path(aspirant) %></td>
     <td><%= link_to 'Удалить', aspirant, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

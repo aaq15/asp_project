@@ -10,7 +10,7 @@ class CreateAspirants < ActiveRecord::Migration
       t.boolean :protect_status
       t.datetime :protect_data
       t.boolean :payment
-      t.integer :specialiti_id
+      t.integer :speciality_id
       t.integer :skip
       t.string :rank
       t.datetime :start_date
