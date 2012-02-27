@@ -4,7 +4,6 @@
   <tr>
     <th>Фамилия Имя Отчество</th>
     <th>Звание</th>
-    <th>Ученая степень</th>
     <th>Должность</th>
     <th>Начало работы</th>
     <th>Окончание работы</th>
@@ -16,7 +15,6 @@
 <% @scientmen.each do |scientman| %>
   <tr>
     <td><%= scientman.person.full_name %></td>
-    <td><%= scientman.grade %></td>
     <td><%= scientman.rank %></td>
     <td><%= scientman.job_title %></td>
     <td><%= scientman.start_date.strftime("%d.%m.%Y") %></td>

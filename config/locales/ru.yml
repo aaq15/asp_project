@@ -317,15 +317,34 @@ ru:
         role: "Роль"
         password: "Пароль"
         password_confirmation: "Пароль (повторно)"
+        work_title: "Тема работы"
+        speciality_id: "Специальность"
+        scientman_day: "Дата назначения научного"
+        first_name: "Имя"
+        second_name: "Фамилия"
+        last_name: "Отчество"
+        birthday: "Дата рождения"
+        male: "Пол"
+        telephone: "Телефон"
+        email: "Почта"
+        status: "Статус"
+        grade: "Ученая степень"
+        job_title: "Должность"
+        rank: "Звание"
+        start_date: "Начало периода"
+        finish_date: "Конец периода"
+        person: "Человек"
       chair:
         name: "Имя"
         number: "Номер"
+        specialities: "Специальности"
       subject:
         name: "Название"
       specialiti:
         listing_specialities: "Список специальностей"
         name: "Название"
         key_specialiti: "Код специальности"
+        chair_id: "Кафедра"
       speciality:
         name: "Название"
         key_specialiti: "Код специальности"
@@ -357,6 +376,9 @@ ru:
         start_date: "Начало периода"
         finish_date: "Конец периода"
         person_id: "Человек"
+      skipping:
+        start: "Начало пропуска"
+        finish: "Конец пропуска"
    
   support:
     select:

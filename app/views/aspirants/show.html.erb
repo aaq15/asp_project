@@ -27,7 +27,12 @@
 
 <p>
   <b><%=Aspirant.human_attribute_name(:scientman_id)%>:</b>
-  <%= @aspirant.scientman.person.full_name %>
+  <%= scientman_name_for(@aspirant) %>
+</p>
+
+<p>
+  <b><%=Aspirant.human_attribute_name(:scientman_day)%>:</b>
+  <%= @aspirant.scientman_day.strftime("%d.%m.%Y") %>
 </p>
 
 <p>
@@ -38,6 +43,11 @@
 <p>
   <b><%=Aspirant.human_attribute_name(:protect_status)%>:</b>
   <%= @aspirant.protect_status %>
+</p>
+
+<p>
+  <b><%=Aspirant.human_attribute_name(:work_title)%>:</b>
+  <%= @aspirant.work_title %>
 </p>
 
 <p>
@@ -70,24 +80,24 @@
 
 <table>
 	<thead>
-		<tr><th colspan="2">Вступительный экзамен</th>
-		<tr><th>Предмет</th><th>Оценка</th>
+		<tr><th colspan="3">Вступительный экзамен</th>
+		<tr><th>Предмет</th><th>Оценка</th><th>Дата сдачи</th>
 		
 	</thead>
 	<tbody>
 		<% @aspirant.marks.where(:value_type => 1).each do |mark| %>
-		<tr><td><%= mark.subject.name %></td><td><%= mark.value %></td>
+		<tr><td><%= mark.subject.name %></td><td><%= mark.value %></td><td><%= mark.day_exam %></td>
 		<% end %>
 	</tbody>
 </table>
 <table>
 	<thead>
-		<tr><th colspan="2">Кандидатский минимум</th>
-		<tr><th>Предмет</th><th>Оценка</th>
+		<tr><th colspan="3">Кандидатский минимум</th>
+		<tr><th>Предмет</th><th>Оценка</th><th>Дата сдачи</th>
 	</thead>
 	<tbody>
 		<% @aspirant.marks.where(:value_type => 2).each do |mark| %>
-		<tr><td><%= mark.subject.name %></td><td><%= mark.value %></td>
+		<tr><td><%= mark.subject.name %></td><td><%= mark.value %></td><td><%= mark.day_exam %></td>
 		<% end %>
 	</tbody>
 </table>

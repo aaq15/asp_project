@@ -13,8 +13,6 @@
     <th>Дата защиты</th>
     <th>Оплата текущего семестра</th>
     <th>Специальность</th>
-    <th>Начало периода</th>
-    <th>Конец периода</th>
     <th>Всего пропущено</th>
     <th></th>
     <th></th>
@@ -28,7 +26,7 @@
     <td><%= aspirant.start_study_date.strftime("%d.%m.%Y") %></td>
     <td><%= aspirant.maybe_finish_date.strftime("%d.%m.%Y") %></td>
     <td><%= aspirant.finish_study_date.strftime("%d.%m.%Y") %></td>
-    <td><%= aspirant.scientman.FIO %></td>
+    <td><%= scientman_name_for(aspirant) %></td>
     <td><%= aspirant.studyform %></td>
     <td><%= aspirant.protect_status %></td>
     <td><%= aspirant.protect_data.strftime("%d.%m.%Y") %></td>
@@ -38,8 +36,6 @@
 			<%= "Задолженность" %>
 		<% end %>
     <td><%= aspirant.speciality.name %></td>
-    <td><%= aspirant.start_date.strftime("%d.%m.%Y") %></td>
-    <td><%= aspirant.finish_date.strftime("%d.%m.%Y") %></td>
     <td><%= aspirant.skip %></td>
     <td><%= link_to 'Изменить', edit_aspirant_path(aspirant) %></td>
     <td><%= link_to 'Удалить', aspirant, :confirm => 'Are you sure?', :method => :delete %></td>

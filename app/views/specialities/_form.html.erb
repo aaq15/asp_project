@@ -19,6 +19,10 @@
     <%= f.label :key_specialiti %><br />
     <%= f.text_field :key_specialiti %>
   </div>
+  <div class="field">
+   <%= f.label :chair_id %><br />
+   <%= f.select :chair_id, Chair.all.map{ |s| [s.name, s.id]} %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

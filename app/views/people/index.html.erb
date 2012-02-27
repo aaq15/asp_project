@@ -11,7 +11,7 @@
 <% @people.each do |person| %>
   <tr>
     <td><%= link_to person.FIO, person %></td>
-    <td><%= link_to person.get_status? %></td>
+    <td><%= person.get_status? %></td>
     <td><%= link_to 'Редактировать', edit_person_path(person) %></td>
     <td><%= link_to 'Удалить', person, :confirm => 'Вы уверены?', :method => :delete %></td>
   </tr>

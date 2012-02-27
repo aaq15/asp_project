@@ -28,5 +28,9 @@ class Aspirant < ActiveRecord::Base
   def studyform
     Forma[study_form]
   end
+  
+  def sex
+    male ? 'мужской' : 'женский'
+  end
     
 end

@@ -8,6 +8,10 @@
   <b><%=Speciality.human_attribute_name(:key_specialiti)%>:</b>
   <%= @speciality.key_specialiti %>
 </p>
+<p>
+  <b><%=Speciality.human_attribute_name(:chair_id)%>:</b>
+  <%= @speciality.chair.name %>
+</p>
 
 
 <%= link_to 'Редактировать', edit_speciality_path(@speciality) %> |

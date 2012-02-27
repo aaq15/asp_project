@@ -16,12 +16,8 @@
     <%= f.select :person_id, Person.where(:status => 1).map{ |s| [s.full_name, s.id]} %>
   </div>
   <div class="field">
-    <%= f.label :grade %><br />
-    <%= f.text_field :grade %>
-  </div>
-  <div class="field">
     <%= f.label :rank %><br />
-    <%= f.text_field :rank %>
+    <%= f.select :rank, ["Нет звания", "Старший научный сотрудник", "Доцент", "Профессор"] %>
   </div>
   <div class="field">
     <%= f.label :job_title %><br />

@@ -10,6 +10,16 @@
   <%= @chair.number %>
 </p>
 
+<p>
+  <b><%= Chair.human_attribute_name(:specialities) %>:</b>
+  <table>
+  <tr><td><b>Название:</td><td><b>Код:</td>
+  <% @chair.specialities.each do |s| %>
+	<tr><td><%= s.name %></td>  <td><%= s.key_specialiti %></td></tr>
+  <% end %>
+  </table>
+</p>
+
 
 <%= link_to 'Изменить', edit_chair_path(@chair) %> |
 <%= link_to 'Назад к списку кафедр', chairs_path %>

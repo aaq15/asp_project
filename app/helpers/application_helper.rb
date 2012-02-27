@@ -11,5 +11,13 @@ module ApplicationHelper
     end
     link_to_function(name, "add_fields(this, \"#{association}\", \"#{escape_javascript(fields)}\")")
   end
+  
+  def select_or_add(name, f, association)
+    new_object = f.object.class.reflect_on_association(person).klass.new
+    fields = f.fields_for(:person, new_object, :child_index => "new_person") do |builder|
+      render(person.to_s.singularize + "_fields", :f => builder)
+    end
+    link_to_function(name, "add_fields(this, \"person\", \"#{escape_javascript(fields)}\")")
+  end
 
 end

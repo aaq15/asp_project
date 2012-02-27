@@ -1,0 +1,37 @@
+<div class="field">
+    <%= f.label :second_name %><br />
+    <%= f.text_field :second_name %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :birthday %><br />
+    <%= f.date_select :birthday, :start_year => Time.now.year - 200, :end_year => Time.now.year, :default => 23.years.ago %>
+  </div>
+  <div class="field">
+    <%= f.label :telephone %><br />
+    <%= f.text_field :telephone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :male %><br />
+    <%= f.radio_button :male,"1",:checked=> person.male? %>
+    "Мужской"
+    <br/>
+    <%= f.radio_button :male,"0",:checked=> !person.male? %>
+    "Женский"
+    <br/>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.select :status, options_for_select([["Неопределен", 0], ["Науч. руководитель", 1], ["Аспирант",2]], person.status) %>
+  </div>
