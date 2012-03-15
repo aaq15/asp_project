@@ -348,6 +348,7 @@ ru:
       speciality:
         name: "Название"
         key_specialiti: "Код специальности"
+        chair_id: "Кафедра"
       mark:
         value: "Оценка"
         aspirant_id: "Аспирант"
