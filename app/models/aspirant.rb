@@ -2,7 +2,7 @@ class Aspirant < ActiveRecord::Base
   belongs_to :person
   belongs_to :scientman
   belongs_to :speciality
-  has_many :marks
+  #has_many :marks
   has_many :skippings
   
   validates :aspirant_type,:presence=>true

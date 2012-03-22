@@ -2,6 +2,7 @@ class Person < ActiveRecord::Base
   default_scope order(:second_name)
   has_one :aspirant
   has_one :scientman
+  has_many :marks
   
   validates :first_name,:presence=>true,:length=>{:minimum => 3}
   validates :second_name,:presence=>true,:length=>{:minimum => 3}

@@ -3,7 +3,7 @@ class Speciality < ActiveRecord::Base
   belongs_to :chair
   has_many :aspirants
   
-  validates :name,:presence => true,:uniqueness => true
+  validates :name, :presence => true
   validates :key_specialiti,:presence => true,:uniqueness => true
    
 end
